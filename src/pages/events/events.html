@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="flex jcc" col-1>
+        <button ion-button small (click)="goHome()">
+          <i class="fas fa-angle-left"></i>
+        </button>
+      </ion-col>
+      <ion-col class="flex jci">
+        <span class="header--title">Events</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content no-bounce>
+  <ion-grid monitor>
+    <ion-row class="c-events" *ngFor="let event of events">
+      <ion-col>
+        <ion-card (click)="expandEvent(event)">
+          <div class="img" [style.background-image]="'url('+ event.src + ')'"></div>
+          <!-- container -->
+          <div class="container--data__card">
+            <div class="flex justify-to-center data__card">
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <div class="card-title flex justify-to-center">{{ event.title}}</div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <div class="card-subtitle flex justify-to-center">{{ event.short }}</div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
+          <!-- end container -->
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid id="no_service" class="flex justify-to-center" *ngIf='serviceNotAvailable' monitor>
+    <ion-row>
+      <div class="showNotService">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="flex justify-to-center">
+              <i class="fas fa-sad-cry"></i>
+            </ion-col>
+          </ion-row>
+          <ion-row class="mg-top-1">
+            <ion-col>
+              <span>Service Unavailable</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-row>
+  </ion-grid>
+  <ion-fab right bottom>
+    <button ion-fab mini (click)='scrollTop()'>
+      <i class="fas fa-angle-up"></i>
+    </button>
+  </ion-fab>
+</ion-content>

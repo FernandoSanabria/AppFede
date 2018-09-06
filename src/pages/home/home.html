@@ -1,0 +1,67 @@
+<ion-content no-bounce>
+  <div class="s"></div>
+  <div class="t" padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="flex jci">
+          <button class="tool animated--menubutton" ion-button small monitor>
+            <i class="fas fa-bars"></i>
+          </button>
+        </ion-col>
+        <ion-col class="flex jcd">
+          <button class="tool" ion-button small (click)="togglePopOver($event)">
+            <i class="fas fa-cog"></i>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="mg-top-1" padding>
+        <ion-col class="flex jci">
+          <h1 [animate]='titlesAnimated' class="slogan"></h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="flex jcc">
+          <h3 class="idea-answer">¿Que vas hacer hoy?</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="flex jcc">
+          <div class="content-idea material-shadow-1 flex jca">
+            <ion-input [(ngModel)]='idea' placeholder="Escribe aqui..." class="idea-control"></ion-input>
+            <div>
+              <button class="idea-send" ion-button small (click)="addNewIdea()">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="c">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ideas-list [cards]='cards$ | async' (onAddIdea)='updateIdeaList($event)'></ideas-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab bottom right>
+    <button ion-fab big class="pages">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab class="pages">
+        <i class="fabrand fa-facebook-square"></i>
+      </button>
+      <button ion-fab class="pages">
+        <i class="fabrand fa-instagram"></i>
+      </button>
+      <button ion-fab class="pages">
+        <i class="fabrand fa-twitter"></i>
+      </button>
+      <button ion-fab class="pages"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

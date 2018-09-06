@@ -1,0 +1,230 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+$bg: (
+  indigo: unquote('linear-gradient(-35deg, #4E2BCC 3%, #B620E0 100%)'),
+  blue:  unquote('linear-gradient(-35deg, #289DCC 3%, #815EFF 94%)'),
+  red: unquote('linear-gradient(-35deg, #9119B3 0%, #E64C4C 88%)'),
+  teal: unquote('linear-gradient(-35deg, #36AC91 3%, #5AD0FF 94%)'),
+  orange: unquote('linear-gradient(-35deg, #B31919 3%, #FB8332 94%)')
+);
+
+
+@function bg($index)
+{
+  @if map-has-key($bg, $index) {
+
+    @return map-get($bg, $index)
+  }
+}
+
+
+.toast-container {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+}
+
+
+$menu-witdh: 200px;
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+//@import "bootstrap";
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+.justify-to-center {
+	-webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #cac9c9,
+  dark:       #222,
+  grey: 	#607D8B,
+  text: #fff,
+  inactive: #BDBDBD,
+  teal: #009688
+);
+//Override  rounds corners in ion-card
+ion-card {
+  border-radius: 0.5em !important;
+}
+
+i {
+  font-style: normal !important;
+  font-size: 1.5em;
+  line-height: 2 !important;
+  display: block !important;
+}
+
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+@import "animate";
+
+
+.pd-0_5 {
+	padding: 0.5em;
+}
+
+.pd-1 {
+	padding: 1em;
+}
+
+.pd-2 {
+	padding: 2em;
+}
+
+.pd-3 {
+  padding: 3em;
+}
+
+.pd-4 {
+  padding: 4em;
+}
+
+.pd-5 {
+  padding: 5em;
+}
+
+.pd-r-1 {
+	padding-right: 1em;
+}
+
+.pd-r-2 {
+	padding-right: 2em;
+}
+
+.pd-r-3 {
+	padding-right: 3em;
+}
+
+.pd-r-4 {
+	padding-right: 4em;
+}
+
+.mg-top-0_5 {
+  margin-top: 0.5em;
+}
+
+.mg-top-1 {
+	margin-top: 1em;
+}
+
+.mg-top-2 {
+	margin-top: 2em;
+}
+
+.mg-top-3 {
+	margin-top: 3em;
+}
+
+.mg-top-4 {
+	margin-top: 4em;
+}
+
+.mg-top-5 {
+	margin-top: 5em;
+}
+
+.material-shadow-1 {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09), 0 1px 2px rgba(0, 0, 0, 0.21);
+}
+
+.material-shadow-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.19);
+}
+
+.material-shadow-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.material-shadow-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.material-shadow-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.mg-b-1 {
+  margin-bottom: 1em;
+}

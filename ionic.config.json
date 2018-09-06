@@ -1,0 +1,7 @@
+{
+  "name": "stopdrug",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

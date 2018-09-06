@@ -1,0 +1,78 @@
+<ion-header class="content">
+</ion-header>
+<ion-content padding no-bounce class="content">
+  <ion-slides pager>
+    <ion-slide>
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col>
+            <img src="assets/imgs/1.png" alt="Maps in App" width="100" height="100">
+          </ion-col>
+        </ion-row>
+        <ion-row justify-content-center>
+          <ion-col padding text-uppercase>
+            <h1 class="slide-desc">Report a dangerous place</h1>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col>
+            <img src="assets/imgs/2.png" alt="Maps in App" width="100" height="100">
+          </ion-col>
+        </ion-row>
+        <ion-row justify-content-center>
+          <ion-col padding text-uppercase>
+            <h1 class="slide-desc">Report a dangerous place</h1>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col>
+            <img src="assets/imgs/3.png" alt="Maps in App" width="100" height="100">
+          </ion-col>
+        </ion-row>
+        <ion-row justify-content-center>
+          <ion-col padding text-uppercase>
+            <h1 class="slide-desc">Report a dangerous place</h1>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+        <ion-grid>
+          <ion-row justify-content-center>
+            <ion-col>
+              <img src="assets/imgs/4.png" alt="Maps in App" width="100" height="100">
+            </ion-col>
+          </ion-row>
+          <ion-row justify-content-center>
+            <ion-col padding text-uppercase>
+              <h1 class="slide-desc">Report a dangerous place</h1>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+  </ion-slides>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 class="flex">
+        <button ion-button [ngClass]="{'buttonShow': buttonShowState, 'buttonHide': buttonHideState}" clear (click)="prevSlide()" text-uppercase #buttonBack>
+          back
+        </button>
+      </ion-col>
+      <ion-col col-6 class="flex jcd">
+        <button ion-button clear (click)=nextSlide() text-uppercase #buttonNext>
+          next
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

@@ -1,0 +1,53 @@
+page-events-details {
+    ion-header {
+        ion-grid {
+            background-color: color($colors, primary);
+            color: #fff;
+        }
+    }
+    ion-content {
+        .grid {
+            padding: 0 !important;
+            margin: 0;
+            ion-col.slide {
+                width: 100%;
+                margin: 0 !important;
+                padding: 0 !important;
+                div.imageOnSlider {
+                    display: block;
+                    width: 100%;
+                    max-height: 20em;
+                    min-height: 15em;
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        }
+        ion-slide {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-height: 15em !important;
+        }
+    }
+    h1 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        font-size: 1.1em !important;
+    }
+    .desc {
+        display: block;
+        text-align: justify;
+    }
+    ion-footer {
+        span, i {
+            color: color($colors, grey);
+        }
+        button {
+            * {
+                color: #fff !important;
+                text-transform: uppercase !important;
+            }
+        }
+    }
+}

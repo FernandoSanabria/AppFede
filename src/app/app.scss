@@ -1,0 +1,70 @@
+// http://ionicframework.com/docs/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@import "../assets/icon/fontawesome/scss/fontawesome";
+@import "../assets/icon/fontawesome/scss/solid";
+@import "../assets/icon/fontawesome/scss/regular";
+@import "../assets/icon/fontawesome/scss/brands";
+@import "../assets/icon/fontawesome/scss/v4-shims";
+
+.jcc {
+  justify-content: center;
+}
+
+.jci {
+  justify-content: flex-start;
+}
+
+.jcd {
+  justify-content: flex-end;
+}
+
+.jca {
+  justify-content: stretch;
+}
+
+.head-controls {
+  color: #1976d2;
+}
+
+.grid-menu {
+  & > .row {
+    text-transform: capitalize;
+  }
+}
+
+.menu-item-content {
+  width: 100%;
+  span {
+    font-size: 1em;
+    & > i {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.footer {
+   span {
+     font-size: 0.7em;
+   }
+}
+
+.buttonShow {
+  visibility: visible;
+}
+.buttonHide {
+  visibility: hidden;
+}

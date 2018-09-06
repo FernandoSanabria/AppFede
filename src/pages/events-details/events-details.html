@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="flex jcc" col-1>
+        <button ion-button small (click)="goEvents()">
+          <i class="fas fa-angle-left"></i>
+        </button>
+      </ion-col>
+      <ion-col class="flex jci">
+        <span text-uppercase>Back</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content no-padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="slide">
+        <ion-slides #slide class="material-shadow-1">
+          <ion-slide *ngFor="let image of images">
+            <div class="imageOnSlider" [style.background-image]="'url('+ image +')'" data-author="UnderNode"></div>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row padding>
+      <ion-card>
+        <ion-card-header>
+          <h1>{{ details.title }}</h1>
+        </ion-card-header>
+        <ion-card-content>
+          <span class="desc">{{details.desc}}</span>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <!--date, where, address-->
+  <ion-grid padding>
+    <ion-row>
+      <ion-col col-8>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2>
+              <i class="fas fa-calendar-alt"></i>
+            </ion-col>
+            <ion-col>
+              <span>{{details.date}}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-2>
+              <i class="fas fa-map-marker-alt"></i>
+            </ion-col>
+            <ion-col>
+              <span>
+                {{details.where}}
+              </span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-2>
+              <i class="fas fa-location-arrow"></i>
+            </ion-col>
+            <ion-col>
+              <span>
+                {{details.address}}
+              </span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-col class="flex jcc" col-4>
+        <button ion-button>I'll go</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
